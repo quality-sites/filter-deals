@@ -18,7 +18,6 @@ class Store extends Observable {
   }
 
   filter() {
-      //let data = [];
       let final = [];
       const deals = this.state.deals;
       const productFilters = this.state.productFilters;

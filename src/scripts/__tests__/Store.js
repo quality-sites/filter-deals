@@ -1,28 +1,7 @@
 import Store from "../Store";
 import mockData from "../../../public/db.json";
 
-const fs = require('fs');
-const path = require('path');
-const html = fs.readFileSync(path.resolve(__dirname, '../../../public/index.html'), 'utf8');
-
-// const fetchPolifill = require('whatwg-fetch')
-// global.fetch = fetchPolifill.fetch
-// global.Request = fetchPolifill.Request
-// global.Headers = fetchPolifill.Headers
-// global.Response = fetchPolifill.Response
-
-jest.dontMock('fs');
-
 describe("filter", () => {
-
-  beforeEach(() => {
-    document.documentElement.innerHTML = html.toString();
-  });
-
-  afterEach(() => {
-      // restore the original func after test
-      jest.resetModules();
-  });
 
   it("should return all deals when no filters applied", () => {
     // Arrange
